@@ -6,31 +6,51 @@ import org.junit.Test;
 public class MyBinaryTreeTest {
     @Test
     public void binarySearchTreeSize3() {
-        BinaryTree<Integer> BinaryTree = new BinaryTree();
-        BinaryTree.add(56);
-        BinaryTree.add(30);
-        BinaryTree.add(70);
-        int size = BinaryTree.size;
+        BinaryTree<Integer> binaryTree = new BinaryTree();
+        binaryTree.add(56);
+        binaryTree.add(30);
+        binaryTree.add(70);
+        int size = binaryTree.size;
         Assert.assertEquals(3,size);
     }
 
     @Test
     public void binarySearchTreeSize() {
-        BinaryTree<Integer> BinaryTree = new BinaryTree();
-        BinaryTree.add(56);
-        BinaryTree.add(30);
-        BinaryTree.add(70);
-        BinaryTree.add(22);
-        BinaryTree.add(40);
-        BinaryTree.add(11);
-        BinaryTree.add(3);
-        BinaryTree.add(16);
-        BinaryTree.add(60);
-        BinaryTree.add(65);
-        BinaryTree.add(63);
-        BinaryTree.add(67);
-        BinaryTree.add(50);
-        int size = BinaryTree.size;
+        BinaryTree<Integer> binaryTree = new BinaryTree();
+        binaryTree.add(56);
+        binaryTree.add(30);
+        binaryTree.add(70);
+        binaryTree.add(22);
+        binaryTree.add(40);
+        binaryTree.add(11);
+        binaryTree.add(3);
+        binaryTree.add(16);
+        binaryTree.add(60);
+        binaryTree.add(65);
+        binaryTree.add(63);
+        binaryTree.add(67);
+        binaryTree.add(50);
+        binaryTree.size();
+        int size = binaryTree.size;
         Assert.assertEquals(13,size);
+    }
+    @Test
+    public void binarySearchTreeSearchElement() {
+        BinaryTree<Integer> binaryTree = new BinaryTree();
+        binaryTree.add(56);
+        binaryTree.add(30);
+        binaryTree.add(70);
+        binaryTree.add(22);
+        binaryTree.add(40);
+        binaryTree.add(11);
+        binaryTree.add(3);
+        binaryTree.add(16);
+        binaryTree.add(60);
+        binaryTree.add(65);
+        binaryTree.add(63);
+        binaryTree.add(67);
+        binaryTree.add(50);
+        Boolean result = binaryTree.search(63);
+        Assert.assertTrue(result);
     }
 }
