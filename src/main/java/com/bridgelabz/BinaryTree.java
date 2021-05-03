@@ -16,12 +16,19 @@ public class BinaryTree<T extends Comparable<T>> {
     }
     private void add(BinaryNode<T> node, T data) {
         if (data.compareTo(node.data) < 0) {
-            node.left = new BinaryNode<T>(data);
-            return;
-
+            if(node.left != null) {
+                add(node.left, data);
+            } else {
+                node.left = new BinaryNode<T>(data);
+                return;
+            }
         } else if (data.compareTo(node.data) > 0) {
-            node.right = new BinaryNode<T>(data);
-            return;
-        }
+            if(node.right != null) {
+                add(node.right, data);
+            } else {
+                node.right = new BinaryNode<T>(data);
+                return;
+            }
+        }else {return;}
     }
 }
