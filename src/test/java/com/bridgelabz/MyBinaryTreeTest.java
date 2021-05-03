@@ -10,6 +10,7 @@ public class MyBinaryTreeTest {
         binaryTree.add(56);
         binaryTree.add(30);
         binaryTree.add(70);
+        binaryTree.print();
         int size = binaryTree.size;
         Assert.assertEquals(3,size);
     }

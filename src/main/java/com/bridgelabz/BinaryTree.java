@@ -1,4 +1,7 @@
 package com.bridgelabz;
+
+import java.util.Scanner;
+
 public class BinaryTree<T extends Comparable<T>> {
     public BinaryNode<T> root;
     public int size;
@@ -11,7 +14,7 @@ public class BinaryTree<T extends Comparable<T>> {
             add(root, data);
         }
         size++;
-        print();
+        //print();
     }
     private boolean isEmpty() {
         return size == 0;
@@ -71,7 +74,12 @@ public class BinaryTree<T extends Comparable<T>> {
         if(isEmpty()) {
             System.out.print("Empty");
         } else {
-            printInOrder(root);
+            System.out.println("\nInOrder: ");
+           printInOrder(root);
+            System.out.println("\nPostOrder: ");
+           printPostOrder(root);
+            System.out.println("\nPreOrder: ");
+           printPreOrder(root);
         }
         System.out.print("\n");
     }
@@ -80,9 +88,8 @@ public class BinaryTree<T extends Comparable<T>> {
         if(node == null) {
             return;
         }
-
         printInOrder(node.left);
-        System.out.printf("%3d ", node.data);
+        System.out.printf(" " + node.data);
         printInOrder(node.right);
     }
 
